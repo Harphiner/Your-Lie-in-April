@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.png">
+    <title>有马公生</title>
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/logo.css">
+    <style>
+        :root {
+            --nav-color: rgba(11, 68, 86, 0.59);
+            --nav-bgcolor: transparent;
+            --nav-color-hover: black;
+            --nav-bg-color-hover: white;
+        }
+
+        body {
+            font-family: 'KaiTi', serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("../image/c_bg.png");
+            background-attachment: fixed;
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 5px solid blue;
+            border-radius: 15px;
+            padding: 20px;
+            width: 90%;
+            max-width: 900px;
+            margin-top: 40px;
+        }
+
+        .intro {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            line-height: 1.6;
+        }
+
+        .image {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .text {
+            margin-left: 20px;
+        }
+
+        .zw {
+            text-indent: 2em;
+        }
+
+        .footer {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 0;
+        }
+
+        .footer .page-button {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="icon-wrapper">
+        <img src="../image/logo.png" id="playBtn" alt="logo" class="icon">
+        <audio id="audioPlayer">
+            <source src="../audio/光るなら_.mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <nav class="nav">
+        <a href="../index.html"><span class="link-background">首页</span></a>
+        <a href="../plot.html"><span class="link-background">剧情介绍</span></a>
+        <a href="../characters.html"><span class="link-background">人物介绍</span></a>
+        <a href="../music.html"><span class="link-background">音乐</span></a>
+    </nav>
+    <div class="container">
+        <div class="intro">
+            <div class="image">
+                <img src="../image/c11.jpg" alt="有马公生" width="220">
+                <img src="../image/c1.png" alt="有马公生" width="220">
+            </div>
+            <div class="text">
+                <p>有马公生（ありま こうせい）</p>
+                <p>生日：3月28日</p>
+                <p>星座：白羊座</p>
+                <p>年龄：14岁</p>
+                <br>角色介绍：<br>
+                <p class="zw">
+                    市立墨谷中学初三学生(14岁)。为了实现妈妈没有完成的梦想“成为世界级的钢琴师”，自小便在母亲严厉的指导下练习着钢琴，并在国内多数的拥有严格评判的比赛中获胜。11岁那年秋天，因为妈妈突然过世，从此在演奏中便听不到自己弹钢琴的声音，因而远离了钢琴。后来因为自己的青梅竹马
+                    泽部椿的介绍，与拉小提琴的宫园薰认识，虽然刚见面时就被误会是偷拍狂魔而留下了不好的印象，但他却在比赛中被宫园薰的演奏所深深吸引。被宫园薰拉作第二次预选的伴奏，但是因为听不到琴音中断演奏，被宫园薰说“again”之后再次弹起了钢琴，以自己的身体记忆作为乐谱，虽然落选但是震撼了全场的观众。漫画中在钢琴比赛中因听不到琴音而中断演奏，而后以自己感情为想象图变换音色为宫园薰而演奏被取消了资格，但充满四月气息的曲子感动了全场。钢琴比赛后，公生的阿姨对公生说道，你的曲子已经说出了，“你喜欢上了她。”
+                    漫画中滕和音乐祭典上，因宫园薰未出席，公生一个人演奏，因为一个初中生对宫园薰的侮辱，他抱着愤怒去弹奏母亲生前最喜欢的曲子“爱的忧伤”在中途认识到了母亲对自己的爱，然后开始琴音变换，让全场的人再次感动无比且深深回味而无心听下一场演奏，并在比赛中解脱了母亲带来的阴影。从那之后公生被称为“表演者”。对宫园薰有好感，但认为她喜欢渡亮太。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <button class="page-button"><a href="ymgs.html">页面 1</a></button>
+        <button class="page-button"><a href="gyx.html">页面 2</a></button>
+        <button class="page-button"><a href="dlt.html">页面 3</a></button>
+        <button class="page-button"><a href="xc.html">页面 4</a></button>
+        <button class="page-button"><a href="gyx.html">下一页</a></button>
+    </div>
+
+    <script>
+        const palyBtn = document.getElementById('playBtn');
+        const audioPlayer = document.getElementById('audioPlayer');
+        palyBtn.addEventListener('click', function () {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                palyBtn.src = "../image/logo.png";
+            } else {
+                audioPlayer.pause();
+                palyBtn.src = "../image/logo.png";
+            }
+        })
+    </script>
+</body>
+
+</html>

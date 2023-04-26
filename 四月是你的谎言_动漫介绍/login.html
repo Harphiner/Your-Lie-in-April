@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/logo.css">
+    <link rel="shortcut icon" href="/favicon.png">
+    <title>登录</title>
+    <script type="text/javascript" src="js/crypto.js"></script>
+    <script type="text/javascript">
+        const DATABASE = [
+            {
+                username: "th123",
+                password: "68849c04e2d9bbaf82c955510706c0fd98e233751c51fa751747b72c0d6b507c"
+            }
+        ].map(JSON.stringify)
+        function checkCredentials() {
+            const SALT = "@tsinghua";
+            const KEY = "Th4_w0rk_o7_cvV_Fr0nt_4nd";
+            const username = document.getElementById("username").value;
+            const password = sha256(btoa(encodeURIComponent(xorString(document.getElementById("password").value + SALT, KEY))));
+            if (DATABASE.includes(JSON.stringify({ username, password }))) {
+                return true;
+            } else {
+                alert("账号或密码错误，请重新输入");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="icon-wrapper">
+        <img src="image/logo.png" alt="logo" class="icon">
+    </div>
+    <form action="./index.html" class="login" onsubmit="return checkCredentials();">
+        <p>LOGIN</p>
+        <input type="text" id="username" placeholder="用户名">
+        <input type="password" id="password" placeholder="密码">
+        <input type="submit" class="btn" value="登 录">
+    </form>
+</body>
+
+</html>
