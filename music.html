@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.png">
+    <title>音乐</title>
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/logo.css">
+    <link rel="stylesheet" href="css/music.css">
+    <style>
+        :root {
+            --nav-color: rgba(1, 8, 49, 0.59);
+            --nav-bgcolor: transparent;
+            --nav-color-hover: black;
+            --nav-bg-color-hover: white;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url("image/music_bg.png");
+            background-attachment: fixed;
+        }
+
+        body.background {
+            background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="icon-wrapper">
+        <img src="image/logo.png" alt="logo" class="icon">
+    </div>
+    <nav class="nav">
+        <a href="index.html"><span class="link-background">首页</span></a>
+        <a href="plot.html"><span class="link-background">剧情介绍</span></a>
+        <a href="characters.html"><span class="link-background">人物介绍</span></a>
+        <a href="music.html"><span class="link-background">音乐</span></a>
+    </nav>
+    <div class="shell">
+        <input type="radio" name="music" id="item-1" checked>
+        <audio src="./audio/光るなら_.mp3" hidden></audio>
+        <input type="radio" name="music" id="item-2">
+        <audio src="./audio/キラメキ.mp3" hidden></audio>
+        <input type="radio" name="music" id="item-3">
+        <audio src="./audio/七色シンフォニー.mp3" hidden></audio>
+        <input type="radio" name="music" id="item-4">
+        <audio src="./audio/オレンジ_.mp3" hidden></audio>
+        <input type="radio" name="music" id="item-5">
+        <audio src="./audio/My Truth～ロンド・カプリチオーソ.mp3" hidden></audio>
+        <div class="cards">
+            <label class="card" for="item-1" id="song-1">
+                <img src="image/m1.jpg">
+            </label>
+            <label class="card" for="item-2" id="song-2">
+                <img src="image/m2.jpg">
+            </label>
+            <label class="card" for="item-3" id="song-3">
+                <img src="image/m3.jpg">
+            </label>
+            <label class="card" for="item-4" id="song-4">
+                <img src="image/m4.jpg">
+            </label>
+            <label class="card" for="item-5" id="song-5">
+                <img src="image/m5.jpg">
+            </label>
+        </div>
+        <!-- 播放器 -->
+        <div class="player">
+            <div class="information">
+                <div class="player-control" id="player-control">
+                    <i class="player-btn"></i>
+                    <i class="player-btn"></i>
+                    <img style="display: none" src="image/button.jpg" style="width:40px;margin-top: 5px;">
+                </div>
+                <div class="info-area" id="test">
+                    <label class="song-info" id="song-info-1">
+                        <div id="player-title" class="title">OP1《光るなら》</div>
+                        <div id="player-singer" class="Subheading">
+                            <div class="singer">Goose house</div>
+                            <div class="time">3:01</div>
+                        </div>
+                    </label>
+                    <label class="song-info" id="song-info-2">
+                        <div class="title">ED1《キラメキ》</div>
+                        <div class="Subheading">
+                            <div class="singer">Wacci</div>
+                            <div class="time">3:29</div>
+                        </div>
+                    </label>
+                    <label class="song-info" id="song-info-3">
+                        <div class="title">OP2《七色シンフォニー》</div>
+                        <div class="Subheading">
+                            <div class="singer">Koala Mode</div>
+                            <div class="time">3:09</div>
+                        </div>
+                    </label>
+                    <label class="song-info" id="song-info-4">
+                        <div class="title">ED2《オレンジ》</div>
+                        <div class="Subheading">
+                            <div class="singer">7!!</div>
+                            <div class="time">3:09</div>
+                        </div>
+                    </label>
+                    <label class="song-info" id="song-info-5">
+                        <div class="title">第11话插入歌《My Truth～ロンド・カプリチオーソ》</div>
+                        <div class="Subheading">
+                            <div class="singer">宫园薰(种田梨沙)</div>
+                            <div class="time">3:09</div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <span class="progress" id="progress"></span>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/music.js"></script>
+</body>
+
+</html>
