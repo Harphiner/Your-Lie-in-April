@@ -1,11 +1,1 @@
-# web-design
-### learning of web-design
-
-##### ------ 2023.4.26 第一次日志更新 ------
-
-大一下学期相关课程学期作业
-一些亮点：
-1. 3d动态图片导航；
-2. 旋转音乐盒：其中音乐盒用css做出旋转样式（模仿b站代码），播放器出click事件，纯css手打（包括暂停与播放按钮的制作，包括进度条与歌曲信息变化）；
-3. 加密的login网站；
-
+The site is live at https://harphiner.github.io/web-design/
